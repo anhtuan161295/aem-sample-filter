@@ -13,9 +13,21 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
 
 <pre data-sly-use.hello="com.aem.community.core.models.HelloWorldModel">
 HelloWorldModel says:
 ${hello.message}
 </pre>
+
+<h1>${properties.multiCol}</h1>
+<!--/* <sly data-sly-list="${properties.multiCol}"> */-->
+    <!--/* <h1>${item.linkUrl}</h1> */-->
+    <!--/* <h1>${item.linkText}</h1> */-->
+<!--/* </sly> */-->
+
+<sly data-sly-list="${resource.children}">
+    <sly data-sly-list="${item.children}">
+        ${item.linkText}
+        ${item.linkUrl}
+    </sly>
+</sly>
