@@ -20,6 +20,7 @@
                             fieldLabel="Multifield collection"
                             fieldDescription="Click + to add new item"
                             composite="{Boolean}true"
+                            orderable="{Boolean}false"
                             minItems="1"
                             maxItems="3"
                             maxlinksallowed="3"
