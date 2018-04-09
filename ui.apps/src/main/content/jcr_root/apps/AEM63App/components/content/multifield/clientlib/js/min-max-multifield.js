@@ -42,9 +42,7 @@
 
         // Event handler for remove button
         $(removeButton).on('click.button.coral-Multifield-remove', function () {
-            count = getItemLength(multifield);
-            count--;
-            updateDialogUI();
+            removeButtonHandler();
         });
 
         // Event handler for add button
@@ -55,14 +53,18 @@
             setTimeout(
                 function () {
                     $(multifield[0]).find('button.coral-Multifield-remove').on('click.button.coral-Multifield-remove', function () {
-                        count = getItemLength(multifield);
-                        count--;
-                        updateDialogUI();
+                        removeButtonHandler();
                     });
                 }, 200
             )
 
         });
+
+        function removeButtonHandler() {
+            count = getItemLength(multifield);
+            count--;
+            updateDialogUI();
+        }
 
         // Update dialog ui based on item length
         // Disable add button if item length > max, else enable add button
