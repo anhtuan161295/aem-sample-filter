@@ -2,6 +2,13 @@
 
 This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
+## Notes
+Module `ui.apps` contains the sample code for:
+- custom multi-field component using Javascript
+
+Multi-field component is stored in `ui.apps/src/main/content/jcr_root/apps/AEM63App/components/content/multifield`
+
+
 ## Modules
 
 The main parts of the template are:
